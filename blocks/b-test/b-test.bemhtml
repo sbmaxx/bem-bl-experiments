@@ -1,0 +1,22 @@
+block 'b-' + 'test' {
+
+    js: {
+    }
+
+    tag: 'form'
+
+}
+
+block b-test, elem item {
+
+    default, !this._id: {
+        local( this._id = 'id-' + Math.random() ) this.apply();
+    }
+
+    content: [
+        { block: 'b-form-checkbox', mods: { size: 13, checked: 'checked' }, checkboxAttrs: { id: this._id, name: 'category' }},
+        '&nbsp;',
+        { tag: 'label', attrs: { 'for': this._id }, content: this.ctx.content }
+    ]
+
+}
