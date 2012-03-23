@@ -4,10 +4,10 @@
         { block: 'i-jquery', elem: 'core' },
         { elem: 'js', url: 'link.js' }
     ],
-    content: [{
+    content: {
         block: 'b-link',
-        mods: { pseudo: 'yes' },
         mix: [{ block: 'b-test-link', js: true }],
+        mods: { pseudo: 'yes' },
         content: 'link'
-    }, { block: 'b-test-link' }]
+    }
 })
